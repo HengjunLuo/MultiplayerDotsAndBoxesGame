@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SENG513 4x4 Dots And Boxes</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <div id="game_page">
+        <div id="score_board_and_buttons">
+            <h1>Dots And Boxes</h2>
+                <button id="back">Back To Homepage</button>
+                <div id="score_board">
+                    <div id="room_info">
+                        <span class="category">Room ID:</span>
+                        <span id="current_room_id"></span>
+                        <button id="copyid">Copy Room ID</button>
+                    </div>
+                    <div id="scores">
+                        <span class="category">Scores:</span>
+                        <span>Player 1: <span id="p1score">0</span></span>
+                        <span>Player 2: <span id="p2score">0</span></span>
+                        <span>Player 3: <span id="p3score">0</span></span>
+                    </div>
+                </div>
+                <div id="messages">
+                    <span id="message">Waiting on more Players</span>
+                    <span id="player">Player ID Not Assigned</span>
+                </div>
+
+        </div>
+        <div id="canvas">
+            <canvas></canvas>
+        </div>
+    </div>
+
+    <div id="starting_page">
+        <h1>4x4 Dot and Boxes</h1>
+        <br>
+        <button class="customized_button" id="create">Create room</button>
+        <br>
+        <label for="room_id">Joing Room BY ID:</label>
+        <input type="text" id="room_id" name="room_id">
+        <button class="customized_button" id="join">Join room</button>
+    </div>
+    <script src="/scripts/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.0/socket.io.js"></script>
+    <script src="/scripts/index.js"></script>
+</body>
+
+</html>
